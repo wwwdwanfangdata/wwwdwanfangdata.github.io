@@ -151,17 +151,12 @@
   </style>
   <script>var _hmt = _hmt || [];
     (function () {
-      var hm = document.createElement("script");
       var allCssLink = document.createElement('link');
       var iconfontCssLink = document.createElement('link');
       var wfCssLink = document.createElement('link');
       var thinJsSrc = document.createElement('script');
       var s = document.head;
 
-      // 百度统计分析
-      hm.type = "text/javascript";
-      hm.src = "https://hm.baidu.com/hm.js?838fbc4154ad87515435bf1e10023fab";
-      s.appendChild(hm);
 
       allCssLink.rel = 'stylesheet';
       iconfontCssLink.rel = 'stylesheet';
@@ -179,7 +174,6 @@
       s.appendChild(wfCssLink);
       s.appendChild(thinJsSrc);
     })();</script>
-  <script type="text/javascript" src="https://hm.baidu.com/hm.js?838fbc4154ad87515435bf1e10023fab"></script>
   <link rel="stylesheet" href="https://com.wf.pub/font/fa/css/all.css">
   <link rel="stylesheet" href="https://com.wf.pub/font/iconfont/iconfont.css">
   <link rel="stylesheet" href="https://com.wf.pub/wf.css">
@@ -1148,7 +1142,7 @@
         style="display: inline-block;cursor: pointer; color: #8e6529;background-color: #f7eaac;font-size: 10px; height: 15px;width: 15px;line-height: 15px;border-radius: 10px;margin-left: 15px;"
         onclick="var b = document.getElementById('safari-tip-wrapper');b.innerHTML = '';b.style = 'display:none';">X</span>
     </div>
-    <script>function testSafari () {
+    <script>function testSafari() {
         var ua = window.navigator.userAgent.toLowerCase();
         if (ua.indexOf('safari') !== -1 && ua.indexOf('chrome') === -1) {
           var el = document.getElementById('safari-tip-wrapper');
@@ -1157,7 +1151,7 @@
       }
       testSafari();</script>
   </div><input type="hidden" id="userNstr">
-  <script>function login_kjbgTips_callback (userrole, obj) {
+  <script>function login_kjbgTips_callback(userrole, obj) {
       if (userrole == "1" || userrole == "2" && (kjbgOnlineUrl != undefined && kjbgOnlineUrl != null && kjbgOnlineUrl != "")) {
         obj.location.href = $('#userNstr').val();
       } else if (userrole == null || userrole == "" || userrole == undefined || userrole == "0" && (kjbgAuthUrl != undefined && kjbgAuthUrl != null && kjbgAuthUrl != "")) {
@@ -1180,7 +1174,7 @@
       };
     })()
 
-    function packUpChap (obj) {
+    function packUpChap(obj) {
       var close = $(obj).attr("name");
       if ("up" == close) {
         $(obj).attr("name", "down");
@@ -1382,7 +1376,7 @@ logo
         $(function () {
 
 
-          function anxsGetCookie (name) {
+          function anxsGetCookie(name) {
             var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
             if (arr = document.cookie.match(reg))
               return unescape(arr[2]);
@@ -1390,13 +1384,13 @@ logo
               return null;
           }
 
-          function anxsSetCookie (name, value) {
+          function anxsSetCookie(name, value) {
             document.cookie = name + "=" + escape(value) + ";path=/;domain=wanfangdata.com.cn";
           }
 
 
           //社区消息提示
-          function anxsGuide () {
+          function anxsGuide() {
             var backurl = anxsGetCookie("sync_login_wfpub_token");
             var generalUserId = $(".anxs-8qwe-back").attr("data-useid");
             var perioUserId = $(".anxs-8qwe-list-jg .anxs-8qwe-nav-list-main-back").attr("data-useid");
@@ -3525,7 +3519,7 @@ logo
       $('.anxs-8qwe-onlineService').click(function () {
         onlineService();
       });
-      function onlineService () {
+      function onlineService() {
         $.ajax({
           url: 'https://login.wanfangdata.com.cn/user/getOnlineUser',
           dataType: "jsonp",
@@ -4038,7 +4032,7 @@ logo
         }
         $('#suggestionForm').toggle();
       });
-      function GetPageScroll () {
+      function GetPageScroll() {
         var x, y; if (window.pageYOffset) {    // all except IE
           y = window.pageYOffset;
           x = window.pageXOffset;
@@ -4055,7 +4049,7 @@ logo
       setInterval(function () {
         var suggest_arrow = $('#suggestionForm .suggest-arrow');
         var scroTop = GetPageScroll();
-        function mop (str) {
+        function mop(str) {
           return eval(str);
         }
         if (scroTop > 1400) {
